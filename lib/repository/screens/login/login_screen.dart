@@ -1,3 +1,4 @@
+import 'package:blinkit_app/repository/screens/bottom_navigation_bar/bottom_navigation_screen.dart';
 import 'package:blinkit_app/repository/widget/uihelper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -56,7 +57,14 @@ class LoginScreen extends StatelessWidget {
                       height: 48,
                       width: 295,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => BottomNavigationScreen(),
+                            ),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0XFFE23744),
                           shape: RoundedRectangleBorder(
@@ -80,7 +88,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 5),
+                    const SizedBox(height: 6),
                     UiHelper.customText(
                       text:
                           'Access your saved addresses from Zomato automatically!',
