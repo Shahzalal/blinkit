@@ -15,7 +15,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    moveToNextPage();
+    WidgetsBinding.instance.addPostFrameCallback((_){
+      moveToNextPage();
+    });
+
   }
 
   Future<void> moveToNextPage()async{
